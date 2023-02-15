@@ -20,13 +20,13 @@ function isValidWalk(walk) {
     ew = 0;
   if (walk.length === 10) {
     for (let i of walk) {
-      if (i == "n") ns += 1;
+      if (i == "n") ns += 1; // For every single block we walk, respectively we’ll increment and decrement with 1.
       if (i == "s") ns -= 1;
       if (i == "e") ew += 1;
       if (i == "w") ew -= 1;
     }
   } else return false;
-  return ns === 0 && ew === 0;
+  return ns === 0 && ew === 0; // And then finally we will check we returned to our same position or not.
 }
 
 console.log(isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]));
