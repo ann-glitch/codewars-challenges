@@ -5,11 +5,17 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
 */
 
 function boolToWord(bool) {
-  if (bool === true) {
+  if (bool) {
     return "Yes";
   } else {
     return "No";
   }
+}
+
+//OR
+
+function boolToWord(bool) {
+  return bool ? "Yes" : "No";
 }
 
 console.log(boolToWord(true));
